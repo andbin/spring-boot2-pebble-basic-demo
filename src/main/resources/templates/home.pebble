@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+{#
+SPDX-FileCopyrightText: Copyright (c) 2022 Andrea Binello ("andbin")
+SPDX-License-Identifier: MIT
+#}
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="{{ href('/css/reset.css') }}" type="text/css">
+<link rel="stylesheet" href="{{ href('/css/home.css') }}" type="text/css">
+<title>Spring Boot 2 &ndash; Pebble Basic Demo</title>
+</head>
+<body>
+
+<h1>Spring Boot 2 &ndash; Pebble Basic Demo</h1>
+
+<table class="app-info">
+  <tr>
+    <td class="label">Java Runtime Version</td>
+    <td class="value">{{ appInfo.javaRuntimeVersion }}</td>
+  </tr>
+  <tr>
+    <td class="label">Spring Version</td>
+    <td class="value">{{ appInfo.springVersion }}</td>
+  </tr>
+  <tr>
+    <td class="label">Spring Boot Version</td>
+    <td class="value">{{ appInfo.springBootVersion }}</td>
+  </tr>
+  <tr>
+    <td class="label">Pebble Version</td>
+    <td class="value">{{ appInfo.pebbleVersion | default("N/A") }}</td>
+  </tr>
+  <tr>
+    <td class="label">Server Info</td>
+    <td class="value">{{ appInfo.serverInfo }}</td>
+  </tr>
+</table>
+
+</body>
+</html>
